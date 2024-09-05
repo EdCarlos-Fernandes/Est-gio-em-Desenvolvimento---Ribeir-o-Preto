@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página com respostas para o processo seletivo, com exemplos interativos em JavaScript.">
+  <meta name="keywords" content="Fibonacci, JavaScript, contagem de letras, lógica de programação, interrupção de lâmpadas">
+  <title>Respostas - Processo Seletivo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bg-dark text-white p-3">
+    <div class="container">
+      <h1>Respostas do Processo Seletivo</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link text-white" onclick="showContent('resposta1')">Resposta 1</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white" onclick="showContent('resposta2')">Resposta 2</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white" onclick="showContent('resposta3')">Resposta 3</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white" onclick="showContent('resposta4')">Resposta 4</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white" onclick="showContent('resposta5')">Resposta 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-4">
+    <section id="resposta1" class="content d-none">
+      <h2>Resposta 1 - Sequência de Fibonacci</h2>
+      <pre><code>
+// Resposta 1: Programa para verificar se um número pertence à sequência de Fibonacci
+function isFibonacci(num) {
+  let a = 0, b = 1, next;
+  
+  while (b < num) {
+    next = a + b;
+    a = b;
+    b = next;
+  }
+  
+  return b === num || num === 0;
+}
+
+function verificarFibonacci() {
+  const num = parseInt(document.getElementById('numero').value);
+  if (isNaN(num)) {
+    document.getElementById('resultado1').textContent = "Por favor, insira um número válido.";
+    return;
+  }
+  const resultado = isFibonacci(num) ? `${num} pertence à sequência de Fibonacci.` : `${num} não pertence à sequência de Fibonacci.`;
+  document.getElementById('resultado1').textContent = resultado;
+}
+      </code></pre>
+      <div class="form-group">
+        <label for="numero">Digite um número:</label>
+        <input type="number" id="numero" class="form-control" placeholder="Digite um número" />
+        <button class="btn btn-primary mt-2" onclick="verificarFibonacci()">Verificar</button>
+      </div>
+      <div id="resultado1" class="alert alert-info mt-2"></div>
+    </section>
+
+    <section id="resposta2" class="content d-none">
+      <h2>Resposta 2 - Verificar a ocorrência da letra 'a'</h2>
+      <pre><code>
+// Resposta 2: Programa para contar a letra 'a'
+function contarA(string) {
+  const regex = /a/gi;
+  const ocorrencias = string.match(regex);
+  return ocorrencias ? ocorrencias.length : 0;
+}
+
+function contarOcorrencias() {
+  const texto = document.getElementById('texto').value;
+  const resultado = texto.length === 0 ? "Por favor, insira um texto válido." : `A letra 'a' aparece ${contarA(texto)} vezes.`;
+  document.getElementById('resultado2').textContent = resultado;
+}
+      </code></pre>
+      <div class="form-group">
+        <label for="texto">Digite o texto:</label>
+        <input type="text" id="texto" class="form-control" placeholder="Digite o texto" />
+        <button class="btn btn-primary mt-2" onclick="contarOcorrencias()">Contar Letras 'a'</button>
+      </div>
+      <div id="resultado2" class="alert alert-info mt-2"></div>
+    </section>
+
+    <section id="resposta3" class="content d-none">
+      <h2>Resposta 3 - Valor final da variável SOMA</h2>
+      <pre><code>
+// Resposta 3: Valor final da variável SOMA
+let INDICE = 12, SOMA = 0, K = 1;
+while (K < INDICE) {
+  K = K + 1;
+  SOMA = SOMA + K;
+}
+console.log(SOMA); // Resultado: 78
+      </code></pre>
+      <div class="alert alert-info">
+        <p>O valor final da variável SOMA é:</p>
+        <pre>78</pre>
+      </div>
+    </section>
+
+    <section id="resposta4" class="content d-none">
+      <h2>Resposta 4 - Completar as sequências</h2>
+      <pre><code>
+a) 1, 3, 5, 7, ___
+b) 2, 4, 8, 16, 32, 64, ____
+c) 0, 1, 4, 9, 16, 25, 36, ____
+d) 4, 16, 36, 64, ____
+e) 1, 1, 2, 3, 5, 8, ____
+f) 2,10, 12, 16, 17, 18, 19, ____
+
+Respostas
+a) 9
+b) 128
+c) 49
+d) 100
+e) 13
+f) 200
+      </code></pre>
+    </section>
+
+    <section id="resposta5" class="content d-none">
+      <h2>Resposta 5 - Interruptores e lâmpadas</h2>
+      <p>Resposta:</p>
+      <p>
+        Ligue o primeiro interruptor e aguarde alguns minutos. Depois, desligue-o e ligue o segundo. Vá até a sala: a lâmpada quente está ligada pelo primeiro interruptor; a que estiver acesa, pelo segundo; e a que estiver apagada e fria, pelo terceiro.
+      </p>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
