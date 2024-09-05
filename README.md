@@ -34,11 +34,11 @@ O projeto é uma aplicação web com um menu de navegação que permite aos usu�
 
 1. Clone este repositório para o seu computador:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/EdCarlos-Fernandes/Est-gio-em-Desenvolvimento---Ribeir-o-Preto.git
    
 2. Navegue até o diretório do projeto:
    ```bash
-   cd nome-do-repositorio
+   cd Est-gio-em-Desenvolvimento---Ribeir-o-Preto
 
 3. Abra o arquivo index.html em um navegador da web para visualizar a aplicação.
 
