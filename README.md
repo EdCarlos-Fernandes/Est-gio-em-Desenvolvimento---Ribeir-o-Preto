@@ -53,7 +53,7 @@ scripts.js - Arquivo JavaScript com as funções e lógica para as respostas.
 Se você deseja contribuir para este projeto, sinta-se à vontade para enviar um pull request com melhorias ou correções.
 
 ## Licença
-Este projeto está licenciado sob a Licença MIT.
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 Para mais informações, entre em contato com:
